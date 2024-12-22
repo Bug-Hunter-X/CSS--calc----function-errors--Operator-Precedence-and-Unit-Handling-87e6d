@@ -1,0 +1,33 @@
+/* Corrected CSS using calc() function */
+
+.container {
+  width: calc(100% - 10px);
+}
+
+.element {
+  width: calc(50% - 2em);
+}
+
+/* Ensures consistent unit usage */
+.another-element {
+  width: calc( (100vw - 20px)/2 ); /*Proper parenthesis and units*/
+  height: calc(100px + 2em); /* Mix of px and em is acceptable as long as its consistent*/
+}
+
+/*Using calc with different properties*/
+.margin-calc {
+  margin-top: calc(10px + 1em);
+}
+
+/*Avoid these type of errors*/
+/*.wrong {
+  width: calc(100% - 10); /*Missing units*/
+}*/
+
+/*.wrong2 {
+  width: calc(100% - 10px + 2em); /*Inconsistent unit usage*/
+}*/
+
+/*.wrong3 {
+  width: calc(100% - (10px + 2em)); /*Incorrect use of parenthesis*/
+}*/
